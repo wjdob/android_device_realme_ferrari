@@ -9,6 +9,9 @@ include device/oneplus/sm8450-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/realme/ferrari
 
+# DTB / DTBO
+TARGET_MERGE_DTBOS_WILDCARD := ferrari-21631-waipio-overlay
+
 # Biometrics (Face)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
