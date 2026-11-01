@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from realme GT 2 Pro (RMX3301_14.0.0.801(EX01)).
+## are from realme GT 2 Pro (RMX3301_15.0.0.1410(EX01)).
 
 # ACDB
 odm/etc/acdbdata/EU/acdb_cal.acdb
@@ -55,7 +55,6 @@ odm/lib/rfsa/adsp/libvdsuperphoto_skel.so
 
 # Audio firmware
 odm/firmware/tfa98xx.cnt
-odm/lib64/libtfa98xx.so
 
 # Audio LVACFS params
 odm/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat
@@ -94,6 +93,14 @@ odm/etc/lvacfs_params/3mic/audiozoom_2.txt
 odm/etc/lvacfs_params/3mic/audiozoom_3.txt
 odm/lib64/lib_lvacfs.so
 odm/lib64/liblvacfs_wrapper.so
+
+# Camera compatibility
+system/lib64/libziparchive.so:odm/lib64/libziparchive_odm.so;FIX_SONAME
+vendor/lib64/libcv_common.so:vendor/lib64/libcv_common_waipio.so;FIX_SONAME
+vendor/lib64/libcvp2_1.so
+vendor/lib64/libeva.so:vendor/lib64/libeva_waipio.so;FIX_SONAME
+vendor/lib64/libsnsapi.so:vendor/lib64/libsnsapi_waipio.so;FIX_SONAME
+vendor/lib64/libsynx.so:vendor/lib64/libsynx_waipio.so;FIX_SONAME
 
 # Camera
 odm/etc/camera/3dphoto/color_depth_inpaint.dlc
@@ -806,10 +813,8 @@ odm/etc/camera/stereoParams.bin
 odm/etc/camera/wide.bin
 odm/etc/init/init.odm.camera.provider.override.rc
 odm/etc/vintf/manifest/manifest_oplus_cameraextension_aidl.xml
-odm/lib64/aiboost/libQnnHtp.so
-odm/lib64/aiboost/libQnnHtpPrepare.so
+odm/lib64/aiboost/libQnnHtpPrepare.so;MODULE_SUFFIX=_aiboost
 odm/lib64/aiboost/libQnnHtpV69Stub.so
-odm/lib64/aiboost/libQnnSystem.so
 odm/lib64/camera/components/com.oplus.node.pilot.so
 odm/lib64/camera/components/com.oplus.node.preview.so
 odm/lib64/camera/components/com.oplus.node.sstabdefer.so
@@ -899,7 +904,6 @@ odm/lib64/libWaterMode.so
 odm/lib64/libXDocProcessSDK.so
 odm/lib64/libYTCommon.so
 odm/lib64/lib_rectify.so
-odm/lib64/libaiboost.so
 odm/lib64/libaiboost_hexagon.so
 odm/lib64/libaisal.so
 odm/lib64/libaisd.so
@@ -981,7 +985,6 @@ odm/lib64/libpngwrapper.so
 odm/lib64/libpnscr2.so
 odm/lib64/libremosaic_wrapper.so
 odm/lib64/librmsclib1.so
-odm/lib64/librpmbengclient.so
 odm/lib64/libsaveshaderbin.so
 odm/lib64/libsecurity_event_dcs.so
 odm/lib64/libsharebuffer.so
@@ -1177,15 +1180,12 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
-vendor/lib64/libos.so
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqshcamera.so
 vendor/lib64/libsfeShiftExtrapolation.so
-vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
-vendor/lib64/libthreadutils.so
 vendor/lib64/libubifocus.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.aon@1.0-service-impl.so
@@ -1307,7 +1307,6 @@ odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
 odm/lib64/hw/fingerprint.goodix_G7.default.so
 odm/lib64/anc.hal.so
 odm/lib64/libTeeClient.so
-odm/lib64/libolc_vnd.so
 odm/lib64/libgf_hal_G7.so
 odm/vendor/firmware/goodixfp.b00
 odm/vendor/firmware/goodixfp.b01

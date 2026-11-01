@@ -124,6 +124,26 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libc++_shared.so'),
     'odm/lib64/libextensionlayer.so': blob_fixup()
         .replace_needed('libziparchive.so', 'libziparchive_odm.so'),
+    (
+        'vendor/lib64/com.qti.qseeaon.so',
+        'vendor/lib64/com.qti.qseeutils.so',
+        'vendor/lib64/libqshcamera.so',
+    ): blob_fixup()
+        .replace_needed('libsnsapi.so', 'libsnsapi_waipio.so'),
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.commondcs-V1-ndk_platform.so', 'vendor.oplus.hardware.commondcs-V1-ndk.so')
+        .replace_needed('vendor.oplus.hardware.osense.client-V1-ndk_platform.so', 'vendor.oplus.hardware.osense.client-V1-ndk.so')
+        .replace_needed('vendor.oplus.hardware.performance-V1-ndk_platform.so', 'vendor.oplus.hardware.performance-V1-ndk.so')
+        .replace_needed('libsnsapi.so', 'libsnsapi_waipio.so')
+        .replace_needed('libeva.so', 'libeva_waipio.so')
+        .replace_needed('libsynx.so', 'libsynx_waipio.so'),
+    'vendor/lib64/camera/components/com.qti.node.dummydepth.so': blob_fixup()
+        .replace_needed('libeva.so', 'libeva_waipio.so'),
+    (
+        'vendor/lib64/libcvp2_1.so',
+        'vendor/lib64/libeva_waipio.so',
+    ): blob_fixup()
+        .replace_needed('libcv_common.so', 'libcv_common_waipio.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/libnfc-nxp.conf': blob_fixup()
@@ -169,7 +189,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/com.qti.feature2.statsregeneration.so',
         'vendor/lib64/com.qti.feature2.generic.so',
         'vendor/lib64/com.qualcomm.mcx.linearmapper.so',
-        'vendor/lib64/hw/camera.qcom.so',
         'vendor/lib64/hw/com.qti.chi.override.so',
         'vendor/lib64/com.qti.chiusecaseselector.so',
         'vendor/lib64/libcamerapostproc.so',
