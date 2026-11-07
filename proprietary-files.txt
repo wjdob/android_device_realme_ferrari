@@ -1392,3 +1392,8 @@ odm/etc/wifi/sar-vendor-cmd.xml
 odm/etc/wifi/wifisar.cfg
 odm/etc/wifi.cfg
 odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+
+# SIM secure element - matching .1410 / accepted23b provider
+odm/bin/hw/vendor.qti.secure_element@1.2-service
+odm/etc/init/vendor.qti.secure_element@1.2-service.rc
+odm/lib64/android.hardware.secure_element@1.0-impl.so
