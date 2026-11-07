@@ -35,7 +35,7 @@ namespace_imports = [
 
 def lib_fixup_camera_vendor(lib: str, partition: str, *args, **kwargs):
     # Keep the OEM ABI separate from AOSP's source module with the same name.
-    return f'{lib}_ferrari' if partition == 'vendor' else None
+    return 'libcamera2ndk_realme' if partition in ('vendor', 'odm') else None
 
 
 lib_fixups = {
@@ -237,6 +237,12 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('vendor.oplus.hardware.urcc-V1-ndk_platform.so', 'vendor.oplus.hardware.urcc-V1-ndk.so'),
 }  # fmt: skip
 
+# Keep OEM face/NDK users on the stock HIDL ABI alongside AOSP's AIDL NDK.
+blob_fixups['odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service'].binary_regex_replace(
+    rb'libcamera2ndk_vendor\.so\x00', b'libcamera2ndk_realme.so\x00')
+blob_fixups['vendor/lib64/libcamera2ndk_realme.so'] = blob_fixup().replace_needed(
+    'libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
+
 module = ExtractUtilsModule(
     'ferrari',
     'realme',
@@ -244,6 +250,10 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
 )
+
+# Preserve the ziparchive fixup after the upstream tuple is flattened.
+module.blob_fixups['odm/lib64/libextensionlayer.so'].replace_needed(
+    'libziparchive.so', 'libziparchive_odm.so')
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
