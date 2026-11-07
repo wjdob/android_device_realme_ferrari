@@ -246,6 +246,12 @@ blob_fixups['odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service'].bina
 blob_fixups['vendor/lib64/libcamera2ndk_realme.so'] = blob_fixup().replace_needed(
     'libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
 
+# Optional Camera/Gallery LUT assets live in system and are absent without the add-on.
+# Preserve the .1410 backend; change only its resource directory literal.
+blob_fixups['odm/lib64/libAlgoInterface.so'] = blob_fixup().binary_regex_replace(
+    bytes.fromhex('2f6f646d2f6574632f63616d6572612f6d65697368655f6c75742f00'),
+    bytes.fromhex('2f73797374656d2f6574632f7265616c6d652d6c75742f0000000000'))
+
 module = ExtractUtilsModule(
     'ferrari',
     'realme',
