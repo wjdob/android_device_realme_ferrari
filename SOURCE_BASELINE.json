@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "lineageos": "23.2",
+  "release": "Package-23b",
+  "upstream": "https://github.com/pjgowtham/android_device_realme_ferrari",
+  "upstream_revision": "d2c4aeb99aa2e786aaa8d75a41d8737c2a8c6af6",
+  "recipe_sha256": "030ad752dfbfd67bed4744bddd3921cb8e70884b67a7dc15f64a93d582baed45",
+  "release_source": "https://github.com/wjdob/lineageos-realmegt2pro/tree/lineage-23.2/source",
+  "files": [
+    {
+      "path": "proprietary-files.txt",
+      "sha256": "b3805743a79eacb7c4e545455038bd905d39f65766c35f59579502fce2872204"
+    },
+    {
+      "path": "extract-files.py",
+      "sha256": "85c1ef894d00bd379889f7494e5ab9dc8e955161ea7298fcc0fd7902b3136587"
+    },
+    {
+      "path": "device.mk",
+      "sha256": "62e8856771b5aedadd4bd1a14f02846843ce35940c12358e636e7d00ccc65df3"
+    },
+    {
+      "path": "BoardConfig.mk",
+      "sha256": "b84aa78c1a4873de86783adac2c666be872431efca697fe7ed2b88bfc2335b72"
+    },
+    {
+      "path": "overlay/OPlusFrameworksResTarget/res/values-port-2412x1080/dimens.xml",
+      "sha256": "fe557401f0f1282300e55264a9f364e395addc8e5f21cedc75eb0dc823f12e92"
+    },
+    {
+      "path": "overlay/OPlusFrameworksResTarget/res/values-port-3216x1440/dimens.xml",
+      "sha256": "0413a4bafd4927f048d71eea05bfdec5f8af7e28e2200901862e7bed1738c3a1"
+    },
+    {
+      "path": "overlay/OPlusSystemUIResTarget/res/values-port-2412x1080/dimens.xml",
+      "sha256": "8120ddbae43fb39c6ac0c6a8f9bf826de8028eb198058d3cf47ab963e5e84edf"
+    },
+    {
+      "path": "overlay/OPlusSystemUIResTarget/res/values-port-3216x1440/dimens.xml",
+      "sha256": "8091b5192a07bf953f43c804facd0e5536ef2cb56a97ca06bd68953e6a67b3d1"
+    },
+    {
+      "path": "configs/media/media_profiles_V1_0.xml",
+      "sha256": "56165bbacc2dce93461cd9d8c5dfb579c0af2698c0c460451936162c739a8d0f"
+    },
+    {
+      "path": "init/init.ferrari.display.rc",
+      "sha256": "3b6413c929b909eb9541942f5b6390695359de5704ab19549f8eb83836a070a3"
+    },
+    {
+      "path": "init/init.ferrari.fingerprint.rc",
+      "sha256": "197717af2a96755d40634d65e66b7b2be57fa2e21df65935572908b15754a823"
+    }
+  ],
+  "patches": [
+    {
+      "path": "patches/lineage-23.2/0002-ferrari-runtime-panel-firmware.patch",
+      "sha256": "71d40d13f9be8d3466a6a066bd7c8bcc3571a2caefa9b52a1f394f96f8703b9d"
+    },
+    {
+      "path": "patches/lineage-23.2/0011-ferrari-camera-prebuilt-names-device.patch",
+      "sha256": "6cda46a9419614bf906a4e3a82a1b7082852c38857e01f1beccb8fdc83567b85"
+    },
+    {
+      "path": "patches/lineage-23.2/0034-ferrari-agm-odm-calibration.patch",
+      "sha256": "27b93c931f6c70ad1d0ae7ec1d11b95c9a309e299b8dec151922ada4311e5ff7"
+    },
+    {
+      "path": "patches/lineage-23.2/0090-ferrari-system-addon-space.patch",
+      "sha256": "08f90c2c807e2c82b4708c8f93df75eed724db09c9900b532f5f546aa6ea91b3"
+    },
+    {
+      "path": "patches/lineage-23.2/0093-ferrari-recording-profiles.patch",
+      "sha256": "9e25bbfbd6ea63e955eb4a2da65d857719fb2cf748592c360d8a2b538992bf56"
+    },
+    {
+      "path": "patches/lineage-23.2/0096-ferrari-extract-filter-provider.patch",
+      "sha256": "3a92663619c3dba7c0746516a37b81cc5789751f24e9328b80b8f4797437b538"
+    },
+    {
+      "path": "patches/lineage-23.2/0098-ferrari-direct-backlight-init.patch",
+      "sha256": "41ee683299bea5251a3e0901cf65772289ecfe44c978e41f4926c4c2afaca0fc"
+    },
+    {
+      "path": "patches/lineage-23.2/0108-ferrari-fingerprint-provider-restart.patch",
+      "sha256": "62fa69c35af45a8d8c9258c08ef580ced5b2f050692a61f41de9e20984351a81"
+    }
+  ],
+  "limits": "Source-content equivalence to the released recipe. This repository split has not produced a new native build or device test."
+}
