@@ -21,3 +21,7 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 126
 
 # Include the proprietary files BoardConfig.
 include vendor/realme/ferrari/BoardConfigVendor.mk
+
+# Keep optional system-app add-ons separate from the base ROM.
+# Dynamic-partition OTAs carry the resulting filesystem/partition size.
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 536870912
