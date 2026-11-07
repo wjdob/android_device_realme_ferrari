@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "lineageos": "24.0",
+  "release": "Native25",
+  "upstream": "https://github.com/pjgowtham/android_device_realme_ferrari",
+  "upstream_revision": "5e0afb4cae08de6094d293bcc53cb9890a94326a",
+  "recipe_sha256": "0535a86ff7972007680b67d57d10a62d89309b0371a043c7313c193f2a576cea",
+  "release_source": "https://github.com/wjdob/lineageos-realmegt2pro/tree/lineage-24.0/source/lineage-24.0",
+  "files": [
+    {
+      "path": "device.mk",
+      "sha256": "f56a6f055685677a96a965570a69305fbd6057127ee43a6e7aff34487b5867e7"
+    },
+    {
+      "path": "BoardConfig.mk",
+      "sha256": "fba2eab7475f2f531242b8d73fd4935debe5660c456620c9804183e26ef6fc57"
+    },
+    {
+      "path": "proprietary-files.txt",
+      "sha256": "cb444b11c91b0141715ce14703e47f6126ad0f929e8155c5c6b7862d66bf494b"
+    },
+    {
+      "path": "extract-files.py",
+      "sha256": "788ab220eddf7ad847e6d25f14005b8c19bfa030a9563394ca67a90b70135ed2"
+    },
+    {
+      "path": "manifest.xml",
+      "sha256": "0b0f12967bbd21c487976c2ca82d515f9525c39033745b7abb8cee85c5579b83"
+    },
+    {
+      "path": "init/init.ferrari.display.rc",
+      "sha256": "3b6413c929b909eb9541942f5b6390695359de5704ab19549f8eb83836a070a3"
+    },
+    {
+      "path": "init/init.ferrari.fingerprint.rc",
+      "sha256": "197717af2a96755d40634d65e66b7b2be57fa2e21df65935572908b15754a823"
+    },
+    {
+      "path": "overlay/OPlusFrameworksResTarget/res/values-port-2412x1080/dimens.xml",
+      "sha256": "fe557401f0f1282300e55264a9f364e395addc8e5f21cedc75eb0dc823f12e92"
+    },
+    {
+      "path": "overlay/OPlusFrameworksResTarget/res/values-port-3216x1440/dimens.xml",
+      "sha256": "0413a4bafd4927f048d71eea05bfdec5f8af7e28e2200901862e7bed1738c3a1"
+    },
+    {
+      "path": "overlay/OPlusSystemUIResTarget/res/values-port-2412x1080/dimens.xml",
+      "sha256": "8120ddbae43fb39c6ac0c6a8f9bf826de8028eb198058d3cf47ab963e5e84edf"
+    },
+    {
+      "path": "overlay/OPlusSystemUIResTarget/res/values-port-3216x1440/dimens.xml",
+      "sha256": "8091b5192a07bf953f43c804facd0e5536ef2cb56a97ca06bd68953e6a67b3d1"
+    },
+    {
+      "path": "configs/media/media_profiles_V1_0.xml",
+      "sha256": "56165bbacc2dce93461cd9d8c5dfb579c0af2698c0c460451936162c739a8d0f"
+    },
+    {
+      "path": "init/init.ferrari.modules.rc",
+      "sha256": "7798b52f996f986ea87ab01306f5c8208f8031fd6edc13294ade29aa9199cede"
+    },
+    {
+      "path": "init/init.ferrari.post_boot.sh",
+      "sha256": "f1565f3a115177d3c05b34907fd041722a6b1336142013d18482cd148f1021ee"
+    },
+    {
+      "path": "configs/thermal/thermal-engine.conf",
+      "sha256": "c32b39af7a19759a7db7f8b2d92d069a0534848aa7a195ca2cec24aa6c317cb3"
+    }
+  ],
+  "patches": [
+    {
+      "path": "patches/lineage-24.0/0010-ferrari-agm-odm-calibration.patch",
+      "sha256": "27b93c931f6c70ad1d0ae7ec1d11b95c9a309e299b8dec151922ada4311e5ff7"
+    },
+    {
+      "path": "patches/lineage-24.0/0014-ferrari-system-addon-space.patch",
+      "sha256": "08f90c2c807e2c82b4708c8f93df75eed724db09c9900b532f5f546aa6ea91b3"
+    },
+    {
+      "path": "patches/lineage-24.0/0019-ferrari-runtime-init.patch",
+      "sha256": "c758712eba963b5b167133d10a94c812d4b946052f8302b26c7581156ed0f9f4"
+    },
+    {
+      "path": "patches/lineage-24.0/0021-ferrari-synx-dependencies.patch",
+      "sha256": "048f17aa5a2b6f11a975e104ae0d9b36c39817bab1a33592eb06fa646f107444"
+    },
+    {
+      "path": "patches/lineage-24.0/0022-ferrari-camera-ndk-module-identity.patch",
+      "sha256": "46aad4c57f0d3bebf1fd5eebc38bc7a9ce32907b69086eb887548c0412d7116e"
+    },
+    {
+      "path": "patches/lineage-24.0/0027-ferrari-oem-camera-ndk-name.patch",
+      "sha256": "c0af4ad66e39379938092f0c172c4bf8549787c5cee2940cece64a3052321dee"
+    },
+    {
+      "path": "patches/lineage-24.0/0029-ferrari-proven-kernel-toolchain.patch",
+      "sha256": "839af0ac79cefd80bd69c134791ef47bc951f6c1b12f350200210b9fde506f50"
+    },
+    {
+      "path": "patches/lineage-24.0/0030-ferrari-hidl-audio-namespace.patch",
+      "sha256": "10c279a4de9f4200c8109de551e0be79c1da0ee91ee9b4cb922a876a11aea368"
+    },
+    {
+      "path": "patches/lineage-24.0/0031-ferrari-oem-camera-ndk-linkage.patch",
+      "sha256": "96e8d8aac25a4f7ad75a01d3dc97ef3be60981122b0bcf02384066170fd8473a"
+    },
+    {
+      "path": "patches/lineage-24.0/0034-ferrari-external-camera-xml-abi.patch",
+      "sha256": "6e0517afc3299c6522f2eaa083f9fd8a85ffe3e6f555021364b2352f58e1a550"
+    },
+    {
+      "path": "patches/lineage-24.0/0037-ferrari-recording-profiles.patch",
+      "sha256": "9bf5ff14f9a268a638a383c279d800646388aa8dff1a97cd170fedcabf0453a9"
+    },
+    {
+      "path": "patches/lineage-24.0/0038-ferrari-module-loader.patch",
+      "sha256": "cd9a73f4cf65e11b76466fcba7548e51df7eea4fefa34b03e9189e44ed35e867"
+    },
+    {
+      "path": "patches/lineage-24.0/0042-ferrari-postboot-dispatcher.patch",
+      "sha256": "96a73b21cc86fb7c429623aab7b2fb00e072642216e3908b2858bf09d68c8d23"
+    },
+    {
+      "path": "patches/lineage-24.0/0044-ferrari-thermal-default-config.patch",
+      "sha256": "4528cdd96a989388d06473b89d77131d4a3653ea47c803d5c8c513dbbebb0103"
+    },
+    {
+      "path": "patches/lineage-24.0/0048-ferrari-optional-filter-extraction.patch",
+      "sha256": "0efec240cb9cdd6b8cacad52c5389e8e7804ceee8a1304f6deaa17d3fe56d3f7"
+    },
+    {
+      "path": "patches/lineage-24.0/0050-ferrari-restore-sim-secure-element.patch",
+      "sha256": "943ab2473e23b12fd1e243898d39fd0cfe2f05c33797739dde3d6d39bc93793d"
+    },
+    {
+      "path": "patches/lineage-24.0/0051-ferrari-complete-secure-element-instances.patch",
+      "sha256": "170f873b1a03604fdacda952a3b308850b8dca3e4796de2979c627b670e962a7"
+    }
+  ],
+  "limits": "Source-content equivalence to the released recipe. This repository split has not produced a new native build or device test."
+}
