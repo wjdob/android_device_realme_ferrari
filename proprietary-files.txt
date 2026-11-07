@@ -100,6 +100,8 @@ vendor/lib64/libcv_common.so:vendor/lib64/libcv_common_waipio.so;FIX_SONAME
 vendor/lib64/libcvp2_1.so
 vendor/lib64/libeva.so:vendor/lib64/libeva_waipio.so;FIX_SONAME
 vendor/lib64/libsnsapi.so:vendor/lib64/libsnsapi_waipio.so;FIX_SONAME
+vendor/lib64/libos.so
+vendor/lib64/libthreadutils.so
 vendor/lib64/libsynx.so:vendor/lib64/libsynx_waipio.so;FIX_SONAME
 
 # Camera
