@@ -71,7 +71,8 @@ PRODUCT_COPY_FILES += \
 # Ferrari display scheduling and fingerprint provider lifecycle.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.ferrari.display.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ferrari.display.rc \
-    $(LOCAL_PATH)/init/init.ferrari.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ferrari.fingerprint.rc
+    $(LOCAL_PATH)/init/init.ferrari.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ferrari.fingerprint.rc \
+    $(LOCAL_PATH)/init/init.ferrari.modules.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
