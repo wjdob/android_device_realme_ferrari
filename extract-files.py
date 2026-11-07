@@ -33,6 +33,17 @@ namespace_imports = [
 ]
 
 
+def lib_fixup_camera_vendor(lib: str, partition: str, *args, **kwargs):
+    # Keep the OEM ABI separate from AOSP's source module with the same name.
+    return f'{lib}_ferrari' if partition == 'vendor' else None
+
+
+lib_fixups = {
+    **lib_fixups,
+    'libcamera2ndk_vendor': lib_fixup_camera_vendor,
+}
+
+
 def blob_fixup_nop_call(
     ctx: BlobFixupCtx,
     file: File,
