@@ -1,16 +1,28 @@
 # Realme GT2 Pro device tree
 
-LineageOS 24.0 source used by the RMX3301 Native25 release.
-Upstream work comes from [pjgowtham](https://github.com/pjgowtham/android_device_realme_ferrari); its Git history is retained.
-Project commits import the published device-integration patches and templates.
-`SOURCE_BASELINE.json` records their hashes and the exact upstream revision.
+RMX3301 device configuration, overlays and extraction scripts
+for **LineageOS 24.0 / Android 17**. Native25 uses this source.
+Both Native25 and the Android 16 release use kernel **5.10.246**.
 
-[Downloads, install guide and user issues](https://github.com/wjdob/lineageos-realmegt2pro).
-[Pinned manifests and build notes](https://github.com/wjdob/lineageos-realmegt2pro-manifests/tree/lineage-24.0).
-Use the complete source graph and remaining patches there when building.
-Proprietary firmware inputs and signing keys are separate prerequisites.
+## Build and download
 
-Camera, Photos and Clock are optional and maintained in
-[realmegt2pro-oem-apps](https://github.com/wjdob/realmegt2pro-oem-apps).
-The source reorganization changes no released binary or runtime qualification.
-Original file licenses and copyright notices remain in place.
+- [ROM downloads and installation](https://github.com/wjdob/lineageos-realmegt2pro/tree/lineage-24.0)
+- [Source versions and kernel archive](https://github.com/wjdob/lineageos-realmegt2pro/blob/lineage-24.0/SOURCES.md)
+- [Build prerequisites and source commands](https://github.com/wjdob/lineageos-realmegt2pro-manifests/tree/lineage-24.0)
+- [Optional Camera, Photos and Clock](https://github.com/wjdob/realmegt2pro-oem-apps)
+
+Use the matching manifest to download the full source tree. Builds also require
+matching stock files and your own signing keys. `SOURCE_BASELINE.json` lists the
+upstream version and the release's expected file hashes.
+
+## Contributing
+
+Submit code changes here and include the LineageOS version. Report phone problems
+through the release repository's [issue forms](https://github.com/wjdob/lineageos-realmegt2pro/issues/new/choose).
+
+## Credits
+
+Based on [pjgowtham's device tree](https://github.com/pjgowtham/android_device_realme_ferrari),
+with LineageOS/AOSP and upstream contributors. Original Git history, licenses and
+copyright notices are preserved. [Changes and credits](https://github.com/wjdob/lineageos-realmegt2pro/blob/lineage-24.0/CHANGES.md)
+describes the project's additions.
