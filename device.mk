@@ -9,6 +9,9 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Audio
+# RMX3301 stock AGM uses the selected flat ODM calibration directory.
+$(call soong_config_set,qti_agm,acdb_path,/odm/etc/acdbdata)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/backend_conf.xml:$(TARGET_COPY_OUT_ODM)/etc/backend_conf.xml \
     $(LOCAL_PATH)/audio/mixer_paths_waipio_mtp.xml:$(TARGET_COPY_OUT_ODM)/etc/mixer_paths.xml \
