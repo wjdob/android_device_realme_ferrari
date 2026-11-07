@@ -33,6 +33,25 @@ namespace_imports = [
 ]
 
 
+def lib_fixup_ferrari_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_vendor' if partition in ['odm', 'vendor'] else None
+
+
+# Preserve vendor binaries while distinguishing their modules from source shims.
+lib_fixups = {
+    **lib_fixups,
+    (
+        'vendor.oplus.hardware.cameraextension-V1-ndk_platform',
+        'vendor.oplus.hardware.cammidasservice-V1-ndk_platform',
+        'vendor.oplus.hardware.commondcs-V1-ndk_platform',
+        'vendor.oplus.hardware.olc2-V1-ndk_platform',
+        'vendor.oplus.hardware.radio-V2-ndk_platform',
+        'vendor.oplus.hardware.sendextcamcmd-V2-ndk',
+        'vendor.oplus.hardware.cwb@1.0',
+    ): lib_fixup_ferrari_vendor_suffix,
+}
+
+
 def blob_fixup_nop_call(
     ctx: BlobFixupCtx,
     file: File,
